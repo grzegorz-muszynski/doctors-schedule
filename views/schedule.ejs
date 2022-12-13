@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Doctor's Schedule</title>
+
+        <link href="/images/favicon.png" rel="icon">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+        <meta nPMe="viewport" content="initial-scale=1.0, width=device-width">
+
+        <link href="CSS/styles.css" rel="stylesheet">
+
+        <script type="module" src="js/script.js"></script>
+    </head>
+
+    <body>
+        <img src='images/doctor-work.jpg' id='wallpaper'>
+
+        <h1 id="title">Doctor's schedule</h1>
+            <!-- Arrows -->
+        <img class="arrows" id="leftArrow" src="/images/arrowBtn.png"></img>
+        <img class="arrows" id="rightArrow" src="/images/arrowBtn.png"></img>
+
+        <table id="schedule">
+            <tr>
+                <th scope="col" class="days firstColumn">Hours</th>
+                <th scope="col" class="days cells">Monday
+                    <p class="dates"></p>
+                </th>
+                <th scope="col" class="days cells">Tuesday
+                    <p class="dates"></p>
+                </th>
+                <th scope="col" class="days cells">Wednesday
+                    <p class="dates"></p>
+                </th>
+                <th scope="col" class="days cells">Thursday
+                    <p class="dates"></p>
+                </th>
+                <th scope="col" class="days cells">Friday
+                    <p class="dates"></p>
+                </th>
+                <th scope="col" class="days cells">Sathurday
+                    <p class="dates"></p>
+                </th>
+            </tr>
+        </table>
+
+        <div id="popUpBackground">
+            <div id="popUp">
+                <div id="close">+</div>
+                <div><h1 id="appointment">Make an appointment</h1></div>
+
+                        <!-- Pop up form for posting -->
+                    <form method="post" action="/" id="popUpForm">
+                        <div class="rows">
+                            <label class='labels' for="name">Patient's name:</label>
+                            <input type="text" id="name" placeholder="e.g. John" class="popUpInputs" name="name" required>
+                        </div>
+                        <div class="rows">
+                            <label class='labels' for="surname">Patient's surname:</label>
+                            <input type="text" id="surname" placeholder="e.g. Doe" class="popUpInputs" name="surname" required>
+                        </div>
+                        <div class="rows">
+                            <label class='labels' for="number">Number of phone:</label>
+                            <input type="number" id='number' placeholder="Phone number" class="popUpInputs" name="phoneNumber" required>
+                        </div>
+                        <div class="rows">
+                            <label class='labels' for="ssn">Social Security number:</label>
+                            <input type="text" id='ssn' placeholder="SSN" class="popUpInputs" name="SocialSecurityNumber" required>
+                        </div>
+
+                        <div id="btnContainer">
+                            <button id="submitBtn" class='buttons' type="submit">Submit</button>
+                            <button id="changeBtn" class='buttons' type="submit" disabled>Change</button>
+                            <button id="deleteBtn" class='buttons' type="submit" disabled>Delete</button>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </body>
