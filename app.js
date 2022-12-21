@@ -23,7 +23,11 @@ app.use(bodyParser.json());
 
     // Renders the page
 app.get('/', (req, res) => {
+<<<<<<< HEAD
     res.render('schedule');
+=======
+        res.render('schedule');
+>>>>>>> 714bb26e3c6bd91353b740b83215a00bebaebb1c
 });
 
     // Sends all data from the database
@@ -49,7 +53,11 @@ app.post('/posting', (req, res, next) => {
         $SSN: req.body[3],
         $day: req.body[4],
         $time: req.body[5]
+<<<<<<< HEAD
         }, function(err) {
+=======
+    }, function(err) {
+>>>>>>> 714bb26e3c6bd91353b740b83215a00bebaebb1c
         if (err) {
             console.log(err);
             return res.sendStatus(500);
@@ -69,7 +77,11 @@ app.put('/change', (req, res, next) => {
         $SSN: req.body[3],
         $day: req.body[4],
         $time: req.body[5]
+<<<<<<< HEAD
         }, function(err) {
+=======
+    }, function(err) {
+>>>>>>> 714bb26e3c6bd91353b740b83215a00bebaebb1c
         if (err) {
             console.log(err);
             return res.sendStatus(500);

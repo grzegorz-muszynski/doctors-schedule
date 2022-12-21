@@ -1,5 +1,6 @@
 # Doctor's schedule
 #### Video Demo: https://youtu.be/VGTuYrGWWKY
+#### Warning: Although the markdown should give a concise introduction to a project, CS50 staff wanted rather a detailed summary of every file as below.
 #### Description:
 ##### The layout of files
 ###### The system how folders and files are stored is not accidental. Using Express.js framework has forced me to put them in the way we can observe and analyse in next paragraphs.
@@ -35,4 +36,8 @@
 ##### Important:
 ###### The port is set out in the bottom of app.js.
 ###### If you want to use the program - type "node app.js" in the terminal and open in a browser a port number 4002.
+<<<<<<< HEAD
 ###### If you are going to replace the old database with the new one - type "node sql.js".
+=======
+###### If you are going to replace the old database with the new one - type "node sql.js".
+>>>>>>> 714bb26e3c6bd91353b740b83215a00bebaebb1c
