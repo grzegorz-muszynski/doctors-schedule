@@ -1,6 +1,6 @@
 # Generated for using on Fly.io platform
 
-app = "DoctorsSchedule"
+app = "Doctor-s-schedule"
 
 [[services]]
   internal_port = 4002
