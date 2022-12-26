@@ -36,8 +36,4 @@
 ##### Important:
 ###### The port is set out in the bottom of app.js.
 ###### If you want to use the program - type "node app.js" in the terminal and open in a browser a port number 4002.
-<<<<<<< HEAD
 ###### If you are going to replace the old database with the new one - type "node sql.js".
-=======
-###### If you are going to replace the old database with the new one - type "node sql.js".
->>>>>>> 714bb26e3c6bd91353b740b83215a00bebaebb1c
