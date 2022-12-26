@@ -1,0 +1,10 @@
+# Generated for using on Fly.io platform
+
+app = "DoctorsSchedule"
+
+[[services]]
+  internal_port = 4002
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = 443
