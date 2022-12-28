@@ -1,5 +1,5 @@
 # Doctor's schedule
-#### Video Demo: https://youtu.be/VGTuYrGWWKY
+#### Video Demo: https://www.youtube.com/watch?v=uXt8hZSeVLU
 #### Warning: Although the markdown should give a concise introduction to a project, CS50 staff wanted rather a detailed summary of every file as below.
 #### Description:
 ##### The layout of files
