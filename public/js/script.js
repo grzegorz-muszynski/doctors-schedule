@@ -87,6 +87,10 @@ async function createSchedule (array, mondayForWeek) {
     });
     let visitsFromDb = await getResponse.json();
 
+    //==========================================
+    console.log(visitsFromDb);
+    //==========================================
+
         // If there are already cells in the schedule - delete them and make space for a new group
     await scheduleCleaner();
 
