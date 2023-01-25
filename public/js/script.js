@@ -1,9 +1,6 @@
 let hoursUS = ['8:00 AM', '8:15 AM', '8:30 AM', '8:45 AM', '9:00 AM', '9:15 AM', '9:30 AM', '9:45 AM', '10:00 AM', '10:15 AM', '10:30 AM', '10:45 AM', '11:00 AM', '11:15 AM', '11:30 AM', '11:45 AM', '12:00 PM', '12:15 PM', '12:30 PM', '12:45 PM', '1:00 PM', '1:15 PM', '1:30 PM', '1:45 PM', '2:00 PM', '2:15 PM', '2:30 PM', '2:45 PM', '3:00 PM', '3:15 PM', '3:30 PM', '3:45 PM', '4:00 PM', '4:15 PM', '4:30 PM', '4:45 PM', '5:00 PM', '5:15 PM', '5:30 PM', '5:45 PM', '6:00 PM', '6:15 PM', '6:30 PM', '6:45 PM', '7:00 PM', '7:15 PM', '7:30 PM', '7:45 PM', '8:00 PM', '8:15 PM', '8:30 PM', '8:45 PM'];
 
-const API_ENDPOINT = "http://127.0.0.1:4002/";
-
-let startingDateObject = new Date("2022, 12, 12"); // I am going to add here the function which checks current date and looks for the last Monday in purpose of showing the current week
-let lastMonday = new Date("2022, 12, 12"); // This variable will be used for tracking date of monday of currently shown week schedule
+const API_ENDPOINT = "https://doctors-schedule-pern-stack.herokuapp.com/";
 
 const popUpForm = document.getElementById('popUpForm');
 const submitButton = document.getElementById('submitBtn');
@@ -16,6 +13,22 @@ const rightArrow = document.getElementById('rightArrow');
 const leftArrow = document.getElementById('leftArrow');
 
 let currentSlot; // Slot which will be clicked as the last one, will be assigned to that variable
+
+const getLastMondayDate = () => {
+    const date = new Date(); // Getting today's date
+    const daysDifference = date.getDay() - 1; // Getting days difference between today and the last monday
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
+    
+    let lastMondayDay = day - daysDifference;
+    let lastMondayString = `${year}, ${month}, ${lastMondayDay}`;
+    
+    return lastMondayString;
+}
+let mondayString = getLastMondayDate();
+let startingDateObject = new Date(mondayString); // Function given as parameter checks current date and returns a string with date of last Monday
+let lastMonday = new Date(mondayString); // This variable will be used for tracking date of monday of currently shown week schedule. At first rendering it shows a date of current week's monday
 
     //  Function responsible for clearing out all inputs in the pop up window
 const clearAll = (inputsToClear) => {
@@ -87,13 +100,9 @@ async function createSchedule (array, mondayForWeek) {
     });
     let visitsFromDb = await getResponse.json();
 
-    //==========================================
-    console.log(visitsFromDb);
-    //==========================================
-
         // If there are already cells in the schedule - delete them and make space for a new group
     await scheduleCleaner();
-
+    
         // Generating cells for a certain week
     await array.forEach(time => {
             // Creating rows

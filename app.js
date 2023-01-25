@@ -1,9 +1,8 @@
-    // Importing the framework
 const express = require('express');
 const app = express();
 
 const bodyParser = require('body-parser');
-    // Importing sqlite and assigning the database
+
 const sqlite3 = require('sqlite3');
 const db = new sqlite3.Database('./db.sqlite');
 
