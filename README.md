@@ -1,7 +1,7 @@
 # Doctor's schedule
-#### Video Demo: https://youtu.be/VGTuYrGWWKY
+#### Video Demo: https://www.youtube.com/watch?v=uXt8hZSeVLU
 #### Warning: Although the markdown should give a concise introduction to a project, CS50 staff wanted rather a detailed summary of every file as below.
-#### Description:
+#### Description: A program that allows you to conveniently arrange patient visits.
 ##### The layout of files
 ###### The system how folders and files are stored is not accidental. Using Express.js framework has forced me to put them in the way we can observe and analyse in next paragraphs.
 ##### The "public" folder
