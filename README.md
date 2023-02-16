@@ -28,7 +28,7 @@
 ###### Differently was made the route DELETE. For training the other way of sending data to the back-end, I've decided not to send data inside of body in fetch with DELETE method (in script.js). All data needed for deleting a certain row in this case (i.e. time and date) is sent in URL. In app.js, this data is grabbed using req.params and implemented in SQL command.
 #### Other files
 ###### - "db.sqlite" - here is stored a database.
-###### - "sql.js" - Keeps the code responsible for deleting all database (if such exists) and forms the new one.
+###### - "sql.js" - Keeps the code responsible for deleting all database (if such exists) and forming the new one.
 ###### - "hoursArray.txt" - if we want to change system of timeslots - we can copy one from already prepared arrays, and paste in the first line of script.js, instead of current array.
 ###### -"node_modules" - The folder where helpful modules like sqlite3 are stored. They have been imported and are necessary for node.js working.
 ###### -"package-lock.json" and "package.json" - files created after installing npm.
